@@ -1,0 +1,498 @@
+.start-container .start-menu-left, .cortana-container .cortana, .program-container .thumbnail-icon span, .notification-container .battery-panel, .notification-container .battery-panel-bottom .button, .notification-container .wifi-panel, .notification-container .wifi-panel-bottom .currentwifi,
+.notification-container .wifi-panel-bottom .flightmode, .notification-container .volume-panel, .notification-container .notify-panel, .notification-container .notify-panel-bottom, .notification-container .notify-panel-bottom .button {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Microsoft Yahei";
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.taskbar-container {
+  width: 100%;
+  height: 40px;
+}
+
+.fixed-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+}
+
+.start-container {
+  float: left;
+  width: 48px;
+  height: 40px;
+  position: relative;
+}
+.start-container:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.start-container .start-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(images/windows.png);
+}
+.start-container .start-menu {
+  display: none;
+  width: 800px;
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  -moz-box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
+}
+.start-container .start-menu-left {
+  float: left;
+  color: #fff;
+  width: 200px;
+  font-size: 14px;
+}
+.start-container .start-menu-left .avatar {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 60px;
+  margin: 20px 0 20px 20px;
+  position: relative;
+}
+.start-container .start-menu-left .avatar:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.start-container .start-menu-left .avatar:before {
+  content: url(images/avatar.png);
+  display: block;
+  position: absolute;
+  left: 0px;
+}
+.start-container .start-menu-left li {
+  display: block;
+  padding: 10px;
+  margin: 0 0 5px 10px;
+}
+.start-container .start-menu-left li:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.start-container .start-menu-left .fa {
+  margin-right: 10px;
+}
+.start-container .start-menu-right .fa-spinner {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.cortana-container {
+  float: left;
+  width: 344px;
+  height: 40px;
+  position: relative;
+}
+.cortana-container:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.cortana-container .cortana {
+  float: left;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  padding: 0 0 0 10px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.cortana-container .cortana.active {
+  background: #fff;
+}
+.cortana-container .cortana-menu {
+  display: none;
+  width: 392px;
+  height: 500px;
+  position: absolute;
+  left: -48px;
+  bottom: 40px;
+  -moz-box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
+}
+.cortana-container .cortana-menu-left {
+  float: left;
+  width: 48px;
+  height: 100%;
+  position: relative;
+}
+.cortana-container .cortana-menu-left li {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #fff;
+}
+.cortana-container .cortana-menu-left li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.cortana-container .cortana-menu-left li.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+.cortana-container .cortana-menu-left li:last-of-type {
+  position: absolute;
+  bottom: 0;
+}
+.cortana-container .cortana-menu-right {
+  float: right;
+  width: 344px;
+  height: 100%;
+  background: #000;
+  text-align: center;
+}
+.cortana-container .cortana-menu-right .fa-spinner {
+  color: #fff;
+  line-height: 500px;
+}
+
+.program-container {
+  float: left;
+}
+.program-container .icon {
+  float: left;
+  width: 49px;
+  height: 40px;
+  position: relative;
+}
+.program-container .icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.program-container .thumbnail-icon span {
+  position: absolute;
+  display: block;
+  border: 1px solid #fff;
+}
+.program-container .thumbnail-icon span:first-child, .program-container .thumbnail-icon span:last-child {
+  width: 5px;
+  height: 10px;
+  top: 14px;
+}
+.program-container .thumbnail-icon span:first-child {
+  left: 14px;
+  border-right: 0;
+}
+.program-container .thumbnail-icon span:last-child {
+  left: 29px;
+  border-left: 0;
+}
+.program-container .thumbnail-icon span:nth-child(2) {
+  width: 12px;
+  height: 15px;
+  top: 12px;
+  left: 18px;
+}
+.program-container .thumbnail-icon:hover span:first-child {
+  left: 12px;
+  border-right: 1px solid #fff;
+}
+.program-container .thumbnail-icon:hover span:last-child {
+  left: 31px;
+  border-left: 1px solid #fff;
+}
+.program-container i {
+  display: block;
+  width: 49px;
+  height: 40px;
+}
+.program-container .explorer-icon {
+  background: url(images/explorer.png);
+}
+.program-container .chrome-icon {
+  background: url(images/chrome.png);
+}
+.program-container .sublime-text-icon {
+  background: url(images/sublimetext.png);
+}
+
+.notification-container {
+  float: right;
+  position: relative;
+}
+.notification-container .battery,
+.notification-container .wifi,
+.notification-container .notify,
+.notification-container .volume {
+  float: left;
+  width: 30px;
+  height: 40px;
+  position: static;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+.notification-container .battery:hover,
+.notification-container .wifi:hover,
+.notification-container .notify:hover,
+.notification-container .volume:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.notification-container .battery-icon {
+  font-size: 12px;
+}
+.notification-container .wifi-icon,
+.notification-container .volume-icon,
+.notification-container .notify-icon {
+  display: block;
+  width: 25px;
+  height: 40px;
+}
+.notification-container .wifi-icon {
+  background: url(images/wifi.png);
+}
+.notification-container .volume-icon {
+  background: url(images/volume.png);
+}
+.notification-container .notify-icon {
+  background: url(images/notify.png);
+}
+.notification-container .time {
+  float: left;
+  width: 75px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+}
+.notification-container .time:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.notification-container .time-clock,
+.notification-container .time-date {
+  display: block;
+  width: 75px;
+  height: 20px;
+  line-height: 20px;
+  color: #fff;
+  font-size: 12px;
+}
+.notification-container .battery-panel {
+  display: none;
+  width: 360px;
+  height: 180px;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  color: #fff;
+  -moz-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+.notification-container .battery-panel-top {
+  font-size: 36px;
+  line-height: 40px;
+  padding: 20px 30px 0;
+}
+.notification-container .battery-panel-top .fa-battery-half {
+  font-size: 1em;
+}
+.notification-container .battery-panel-top span {
+  display: inline-block;
+  transform: translateY(-8px);
+  font-size: 14px;
+  color: #ccc;
+}
+.notification-container .battery-panel-setting {
+  margin: 10px 30px;
+}
+.notification-container .battery-panel-bottom {
+  padding: 0 20px;
+  height: 60px;
+}
+.notification-container .battery-panel-bottom .button {
+  float: left;
+  width: 85px;
+  height: 60px;
+  margin: 0 10px;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  line-height: 30px;
+  border: 2px solid transparent;
+}
+.notification-container .battery-panel-bottom .button:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.notification-container .battery-panel-bottom .button.disable {
+  color: #ccc;
+}
+.notification-container .battery-panel-bottom .button.disable:hover {
+  border-color: transparent;
+}
+.notification-container .wifi-panel {
+  display: none;
+  width: 360px;
+  height: 580px;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  color: #fff;
+  -moz-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+.notification-container .wifi-panel-top {
+  height: 460px;
+  overflow-y: auto;
+}
+.notification-container .wifi-panel-top i {
+  margin: 0 20px;
+}
+.notification-container .wifi-panel-top li {
+  padding: 20px;
+}
+.notification-container .wifi-panel-top li:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.notification-container .wifi-panel-setting {
+  margin: 10px 30px;
+}
+.notification-container .wifi-panel-bottom {
+  padding: 0 20px;
+  height: 60px;
+}
+.notification-container .wifi-panel-bottom .currentwifi,
+.notification-container .wifi-panel-bottom .flightmode {
+  float: left;
+  width: 85px;
+  height: 60px;
+  margin: 0 10px;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  line-height: 30px;
+  border: 2px solid transparent;
+}
+.notification-container .wifi-panel-bottom .currentwifi:hover,
+.notification-container .wifi-panel-bottom .flightmode:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.notification-container .volume-panel {
+  display: none;
+  width: 360px;
+  height: 85px;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  color: #fff;
+  -moz-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+.notification-container .volume-panel-top {
+  padding: 10px 20px;
+}
+.notification-container .volume-panel-bottom i,
+.notification-container .volume-panel-bottom input,
+.notification-container .volume-panel-bottom span {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 20px;
+}
+.notification-container .volume-panel-bottom input {
+  width: 220px;
+}
+.notification-container .notify-panel {
+  display: block;
+  margin-right: -360px;
+  display: none;
+  width: 360px;
+  height: 620px;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  color: #fff;
+  -moz-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+.notification-container .notify-panel-top {
+  padding: 20px;
+}
+.notification-container .notify-panel-middle {
+  padding: 0 20px;
+  color: #ddd;
+}
+.notification-container .notify-panel-bottom {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  padding-top: 30px;
+  position: absolute;
+  bottom: 0;
+}
+.notification-container .notify-panel-bottom .toggle {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.notification-container .notify-panel-bottom .toggle:hover {
+  color: #ccc;
+}
+.notification-container .notify-panel-bottom .button {
+  float: left;
+  width: 80px;
+  height: 60px;
+  margin: 5px;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  line-height: 30px;
+  border: 2px solid transparent;
+}
+.notification-container .notify-panel-bottom .button:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.notification-container .notify-panel-bottom .button.disable {
+  color: #ccc;
+}
+.notification-container .notify-panel-bottom .button.disable:hover {
+  border-color: transparent;
+}
