@@ -1,4 +1,26 @@
-.start-container .start-menu-left, .cortana-container .cortana, .program-container .thumbnail-icon span, .notification-container .battery-panel, .notification-container .battery-panel-bottom .button, .notification-container .wifi-panel, .notification-container .wifi-panel-bottom .currentwifi,
+html,
+body,
+div,
+ul,
+li,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.start-container .start-menu-left, .cortana-container .cortana, .program-container .thumbnail .thumbnail-icon span, .notification-container .battery-panel, .notification-container .battery-panel-bottom .button, .notification-container .wifi-panel, .notification-container .wifi-panel-bottom .currentwifi,
 .notification-container .wifi-panel-bottom .flightmode, .notification-container .volume-panel, .notification-container .notify-panel, .notification-container .notify-panel-bottom, .notification-container .notify-panel-bottom .button {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -9,34 +31,17 @@
 
 body {
   font-family: "Microsoft Yahei";
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-input {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-}
-
-a {
-  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
 }
 
 .taskbar-container {
-  width: 100%;
-  height: 40px;
-}
-
-.fixed-bottom {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 9;
+  z-index: 99;
+  width: 100%;
+  height: 40px;
 }
 
 .start-container {
@@ -46,20 +51,20 @@ a {
   position: relative;
 }
 .start-container:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
 }
 .start-container .start-icon {
   display: block;
   width: 100%;
   height: 100%;
-  background: url(images/windows.png);
+  background: url(images/sprite.png) 0 0;
 }
 .start-container .start-menu {
   display: none;
-  width: 800px;
   position: absolute;
-  left: 0;
   bottom: 40px;
+  left: 0;
+  width: 700px;
   -moz-box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
@@ -68,25 +73,26 @@ a {
 }
 .start-container .start-menu-left {
   float: left;
-  color: #fff;
   width: 200px;
-  font-size: 14px;
 }
 .start-container .start-menu-left .avatar {
+  position: relative;
   height: 40px;
   line-height: 40px;
   padding-left: 60px;
-  margin: 20px 0 20px 20px;
-  position: relative;
+  margin: 10px 0 10px 10px;
 }
 .start-container .start-menu-left .avatar:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 .start-container .start-menu-left .avatar:before {
-  content: url(images/avatar.png);
+  content: "";
   display: block;
+  width: 40px;
+  height: 40px;
+  background: url(images/sprite.png) -48px 0;
   position: absolute;
-  left: 0px;
+  left: 10px;
 }
 .start-container .start-menu-left li {
   display: block;
@@ -96,11 +102,15 @@ a {
 .start-container .start-menu-left li:hover {
   background: rgba(255, 255, 255, 0.3);
 }
-.start-container .start-menu-left .fa {
+.start-container .start-menu-left i {
   margin-right: 10px;
+  font-size: 14px;
+}
+.start-container .start-menu-right {
+  float: left;
+  width: 500px;
 }
 .start-container .start-menu-right .fa-spinner {
-  color: #fff;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -148,13 +158,13 @@ a {
   width: 48px;
   height: 100%;
   position: relative;
+  font-size: 16px;
 }
 .cortana-container .cortana-menu-left li {
   width: 48px;
   height: 48px;
   line-height: 48px;
   text-align: center;
-  color: #fff;
 }
 .cortana-container .cortana-menu-left li:hover {
   background: rgba(255, 255, 255, 0.1);
@@ -174,51 +184,56 @@ a {
   text-align: center;
 }
 .cortana-container .cortana-menu-right .fa-spinner {
-  color: #fff;
   line-height: 500px;
 }
 
 .program-container {
   float: left;
 }
-.program-container .icon {
+.program-container .thumbnail,
+.program-container .explorer,
+.program-container .chrome,
+.program-container .sublime-text {
   float: left;
   width: 49px;
   height: 40px;
   position: relative;
 }
-.program-container .icon:hover {
+.program-container .thumbnail:hover,
+.program-container .explorer:hover,
+.program-container .chrome:hover,
+.program-container .sublime-text:hover {
   background: rgba(255, 255, 255, 0.2);
 }
-.program-container .thumbnail-icon span {
+.program-container .thumbnail .thumbnail-icon span {
   position: absolute;
   display: block;
   border: 1px solid #fff;
 }
-.program-container .thumbnail-icon span:first-child, .program-container .thumbnail-icon span:last-child {
+.program-container .thumbnail .thumbnail-icon span:first-child, .program-container .thumbnail .thumbnail-icon span:last-child {
   width: 5px;
   height: 10px;
   top: 14px;
 }
-.program-container .thumbnail-icon span:first-child {
+.program-container .thumbnail .thumbnail-icon span:first-child {
   left: 14px;
   border-right: 0;
 }
-.program-container .thumbnail-icon span:last-child {
+.program-container .thumbnail .thumbnail-icon span:last-child {
   left: 29px;
   border-left: 0;
 }
-.program-container .thumbnail-icon span:nth-child(2) {
+.program-container .thumbnail .thumbnail-icon span:nth-child(2) {
   width: 12px;
   height: 15px;
   top: 12px;
   left: 18px;
 }
-.program-container .thumbnail-icon:hover span:first-child {
+.program-container .thumbnail:hover span:first-child {
   left: 12px;
   border-right: 1px solid #fff;
 }
-.program-container .thumbnail-icon:hover span:last-child {
+.program-container .thumbnail:hover span:last-child {
   left: 31px;
   border-left: 1px solid #fff;
 }
@@ -227,19 +242,27 @@ a {
   width: 49px;
   height: 40px;
 }
+.program-container .explorer-icon,
+.program-container .chrome-icon,
+.program-container .sublime-text-icon {
+  background: url(images/sprite.png);
+}
 .program-container .explorer-icon {
-  background: url(images/explorer.png);
+  background-position: 0 -40px;
 }
 .program-container .chrome-icon {
-  background: url(images/chrome.png);
+  background-position: -49px -40px;
 }
 .program-container .sublime-text-icon {
-  background: url(images/sublimetext.png);
+  background-position: -98px -40px;
 }
 
 .notification-container {
   float: right;
   position: relative;
+}
+.notification-container .fa {
+  font-size: 14px;
 }
 .notification-container .battery,
 .notification-container .wifi,
@@ -249,9 +272,6 @@ a {
   width: 30px;
   height: 40px;
   position: static;
-  line-height: 40px;
-  text-align: center;
-  color: #fff;
 }
 .notification-container .battery:hover,
 .notification-container .wifi:hover,
@@ -259,24 +279,26 @@ a {
 .notification-container .volume:hover {
   background: rgba(255, 255, 255, 0.2);
 }
-.notification-container .battery-icon {
-  font-size: 12px;
-}
+.notification-container .battery-icon,
 .notification-container .wifi-icon,
 .notification-container .volume-icon,
 .notification-container .notify-icon {
   display: block;
   width: 25px;
   height: 40px;
+  background: url(images/sprite.png);
+}
+.notification-container .battery-icon {
+  background-position: 0 -80px;
 }
 .notification-container .wifi-icon {
-  background: url(images/wifi.png);
+  background-position: -25px -80px;
 }
 .notification-container .volume-icon {
-  background: url(images/volume.png);
+  background-position: -50px -80px;
 }
 .notification-container .notify-icon {
-  background: url(images/notify.png);
+  background-position: -75px -80px;
 }
 .notification-container .time {
   float: left;
@@ -286,7 +308,7 @@ a {
   text-align: center;
 }
 .notification-container .time:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
 }
 .notification-container .time-clock,
 .notification-container .time-date {
@@ -294,8 +316,6 @@ a {
   width: 75px;
   height: 20px;
   line-height: 20px;
-  color: #fff;
-  font-size: 12px;
 }
 .notification-container .battery-panel {
   display: none;
@@ -304,13 +324,11 @@ a {
   position: absolute;
   bottom: 40px;
   right: 0;
-  color: #fff;
   -moz-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   -o-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
-  text-align: left;
 }
 .notification-container .battery-panel-top {
   font-size: 36px;
@@ -328,6 +346,7 @@ a {
 }
 .notification-container .battery-panel-setting {
   margin: 10px 30px;
+  font-size: 14px;
 }
 .notification-container .battery-panel-bottom {
   padding: 0 20px;
@@ -339,8 +358,6 @@ a {
   height: 60px;
   margin: 0 10px;
   padding: 0 5px;
-  font-size: 12px;
-  color: #fff;
   background: rgba(255, 255, 255, 0.3);
   line-height: 30px;
   border: 2px solid transparent;
@@ -361,13 +378,11 @@ a {
   position: absolute;
   bottom: 40px;
   right: 0;
-  color: #fff;
   -moz-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   -o-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
-  text-align: left;
 }
 .notification-container .wifi-panel-top {
   height: 460px;
@@ -384,6 +399,7 @@ a {
 }
 .notification-container .wifi-panel-setting {
   margin: 10px 30px;
+  font-size: 14px;
 }
 .notification-container .wifi-panel-bottom {
   padding: 0 20px;
@@ -396,8 +412,6 @@ a {
   height: 60px;
   margin: 0 10px;
   padding: 0 5px;
-  font-size: 12px;
-  color: #fff;
   background: rgba(255, 255, 255, 0.3);
   line-height: 30px;
   border: 2px solid transparent;
@@ -413,13 +427,11 @@ a {
   position: absolute;
   bottom: 40px;
   right: 0;
-  color: #fff;
   -moz-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   -o-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
-  text-align: left;
 }
 .notification-container .volume-panel-top {
   padding: 10px 20px;
@@ -444,13 +456,11 @@ a {
   position: absolute;
   bottom: 40px;
   right: 0;
-  color: #fff;
   -moz-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   -o-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.3);
-  text-align: left;
 }
 .notification-container .notify-panel-top {
   padding: 20px;
@@ -481,8 +491,6 @@ a {
   height: 60px;
   margin: 5px;
   padding: 0 5px;
-  font-size: 12px;
-  color: #fff;
   background: rgba(255, 255, 255, 0.3);
   line-height: 30px;
   border: 2px solid transparent;
